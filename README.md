@@ -6,7 +6,6 @@
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.111-009688?style=flat-square&logo=fastapi&logoColor=white)
 ![React](https://img.shields.io/badge/React-18.3-61DAFB?style=flat-square&logo=react&logoColor=black)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-Decision%20Tree-F7931E?style=flat-square&logo=scikit-learn&logoColor=white)
-![Claude AI](https://img.shields.io/badge/Claude-AI%20Explanations-D97757?style=flat-square)
 ![IEEE](https://img.shields.io/badge/Published-IEEE%20ICCCNT%202023-00629B?style=flat-square&logo=ieee&logoColor=white)
 
 **AI-powered real-time crop recommendation system using Wireless Sensor Network (WSN) data.**
@@ -173,23 +172,6 @@ Synthetic WSN data is generated with crop-specific sensor profiles. Six scenario
 | **Harvest** | Moisture and humidity above saturation |
 | **Apply Pesticide** | Temperature and humidity spiked abnormally |
 | **Monitor** | Marginal conditions, slight deviation from ideal |
-
----
-
-## 🧠 Claude AI Integration
-
-The Claude AI layer provides expert agronomist-level reasoning on top of every ML prediction.
-
-**What it returns:**
-- 2-sentence sensor condition diagnosis
-- 3 specific, actionable recommendations
-- Critical alerts (if any)
-- Yield forecast (Low / Medium / High)
-- Recommended next check-in window
-
-**To enable:** Enter your Anthropic API key in the Predict page. Get one at [console.anthropic.com](https://console.anthropic.com).
-
-The ML prediction always runs — Claude AI is an optional enhancement layer.
 
 ---
 
