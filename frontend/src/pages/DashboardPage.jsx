@@ -19,7 +19,7 @@ export default function DashboardPage() {
     <div className="fade-in">
       <h1 style={{ fontSize:26, fontWeight:600, marginBottom:6 }}>Smart Crop Management</h1>
       <p style={{ color:'var(--text-secondary)', fontSize:14, maxWidth:560, marginBottom:28 }}>
-        Real-time AI crop recommendations powered by WSN sensor data. Decision Tree ML + Claude AI.
+        Real-time AI crop recommendations powered by WSN sensor data. Decision Tree ML.
       </p>
 
       {/* Health */}
