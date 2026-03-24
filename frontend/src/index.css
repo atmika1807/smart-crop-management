@@ -1,0 +1,122 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #0e1a13;
+  --bg-card: #142019;
+  --bg-surface: #1b2a20;
+  --border: rgba(45,210,120,0.12);
+  --border-strong: rgba(45,210,120,0.25);
+  --green: #2dd278;
+  --green-dim: #1a7a45;
+  --green-glow: rgba(45,210,120,0.15);
+  --amber: #f0a827;
+  --red: #e05252;
+  --blue: #4da8f5;
+  --text: #e8f5ee;
+  --text-secondary: #7aab8a;
+  --text-muted: #4a7055;
+  --font: 'DM Sans', system-ui, sans-serif;
+  --mono: 'DM Mono', monospace;
+  --radius: 10px;
+  --radius-lg: 16px;
+}
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 3px; }
+
+input[type=range] {
+  -webkit-appearance: none;
+  width: 100%; height: 4px;
+  border-radius: 2px; background: var(--bg-surface);
+  outline: none; border: none;
+}
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px; height: 16px; border-radius: 50%;
+  background: var(--green); cursor: pointer;
+  box-shadow: 0 0 8px rgba(45,210,120,0.4);
+  transition: transform 0.15s;
+}
+input[type=range]::-webkit-slider-thumb:hover { transform: scale(1.2); }
+
+select {
+  font-family: var(--font);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-strong);
+  color: var(--text);
+  padding: 8px 14px;
+  border-radius: var(--radius);
+  font-size: 14px;
+  outline: none; cursor: pointer;
+}
+select:focus { border-color: var(--green); }
+
+input[type=text], input[type=password] {
+  font-family: var(--font);
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 9px 14px;
+  border-radius: var(--radius);
+  font-size: 14px;
+  outline: none; width: 100%;
+  transition: border-color 0.2s;
+}
+input[type=text]:focus, input[type=password]:focus { border-color: var(--green); }
+input::placeholder { color: var(--text-muted); }
+
+button { font-family: var(--font); cursor: pointer; border: none; transition: all 0.18s; }
+
+.btn-primary {
+  background: var(--green); color: #0a1a0f;
+  font-weight: 600; padding: 11px 24px;
+  border-radius: var(--radius); font-size: 15px;
+}
+.btn-primary:hover { background: #3de88a; box-shadow: 0 0 20px rgba(45,210,120,0.3); }
+.btn-primary:active { transform: scale(0.98); }
+.btn-primary:disabled { background: var(--green-dim); color: var(--text-muted); cursor: not-allowed; }
+
+.btn-secondary {
+  background: transparent; color: var(--text-secondary);
+  border: 1px solid var(--border-strong);
+  padding: 9px 18px; border-radius: var(--radius); font-size: 13px;
+}
+.btn-secondary:hover { background: var(--bg-surface); color: var(--text); }
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 20px 24px;
+}
+
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+th { color: var(--text-muted); font-weight: 500; text-align: left; padding: 8px 12px; border-bottom: 1px solid var(--border); font-size: 11px; text-transform: uppercase; letter-spacing: 0.07em; }
+td { padding: 10px 12px; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+tr:last-child td { border-bottom: none; }
+tr:hover td { background: var(--bg-surface); }
+
+@keyframes fadeIn { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:translateY(0); } }
+@keyframes pulse  { 0%,100% { opacity:1; } 50% { opacity:0.4; } }
+@keyframes spin   { to { transform:rotate(360deg); } }
+
+.fade-in { animation: fadeIn 0.3s ease both; }
+.pulse   { animation: pulse 1.5s ease infinite; }
+.spin    { animation: spin 0.8s linear infinite; }
+
+.badge {
+  display: inline-flex; align-items: center;
+  padding: 3px 10px; border-radius: 20px;
+  font-size: 12px; font-weight: 500;
+}
